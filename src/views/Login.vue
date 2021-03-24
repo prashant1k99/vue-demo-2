@@ -27,6 +27,7 @@
           :type="showPassword ? 'text' : 'password'"
           name="password"
           v-model="password"
+          @keypress.enter="sendDataForLogin"
           @click:append="showPassword = !showPassword"
         ></v-text-field>
       </v-form>
