@@ -11,10 +11,10 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('./views/Home.vue'),
-      meta: {
-        authRequired: true
-      }
+      component: () => import('./views/Home.vue')
+      // meta: {
+      //   authRequired: true
+      // }
     },
     {
       path: '/login',
