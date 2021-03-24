@@ -1,0 +1,82 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+	font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	html {
+		font-family: "Inter var", sans-serif;
+	}
+}
+a {
+	text-decoration: none;
+}
+@keyframes fadeInUp {
+	from {
+		transform: translate3d(0, 40px, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+.fade-in-up-leave-to {
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+
+.fade-in-up-enter {
+	opacity: 0;
+	transform: translate3d(0, 40px, 0);
+}
+
+.fade-in-up-enter-to {
+	opacity: 0;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+	animation-name: fadeInUp;
+}
+
+@keyframes fadeInRight {
+	from {
+		transform: translate3d(40px, 0, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+.fade-in-right-leave-to {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.fade-in-right-enter {
+	opacity: 0;
+	transform: translate3d(40px, 0, 0);
+}
+
+.fade-in-right-enter-to {
+	opacity: 0;
+	animation-duration: 0.7s;
+	animation-fill-mode: both;
+	animation-name: fadeInRight;
+}
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+	&:hover {
+		width: 0.8rem;
+	}
+}
+
+body::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #3200bb;
+}
